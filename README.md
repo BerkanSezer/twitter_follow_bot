@@ -1,4 +1,4 @@
-# TWIITER PYTHON AUTO FOLLOW BOT
+# TWITTER PYTHON AUTO FOLLOW BOT
 
 ## You Need:
   - Python3.6
@@ -20,9 +20,9 @@
   pip3 install -r requirements.txt
   ```
   - And run;
-    ```
-    python3 twitter_bot.py <any_twitter_account> <follower_count_as_integer>
-    ```
+  ```
+  python3 twitter_bot.py <any_twitter_account> <follower_count_as_integer>
+  ```
 
 ## How to Works:
   - It opens hidden browser window and try login with your account.
