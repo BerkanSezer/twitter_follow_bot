@@ -28,9 +28,9 @@ def loginPage():
         print("trying submit - ",submit_count)
         username_box = browser.find_element_by_class_name("js-username-field")
         username_box.clear()
-        username_box.send_keys('hacettepeDev')
+        username_box.send_keys('YOUR_USERNAME')
         password_box = browser.find_element_by_class_name("js-password-field").clear()
-        password_box = browser.find_element_by_class_name("js-password-field").send_keys('Helloworld!1234')
+        password_box = browser.find_element_by_class_name("js-password-field").send_keys('<YOUR_PASSWORD>')
         form = browser.find_element_by_class_name('js-signin')
         form.submit()
         submit_count += 1
@@ -43,7 +43,7 @@ def redirectPage():
     time.sleep(3) #wait for loading new people
     last_height = browser.execute_script("return document.body.scrollHeight")
     follow_click_counter = 0
-    SCROLL_PAUSE_TIME = 10.0
+    SCROLL_PAUSE_TIME = 5.0
     follow_buttons = []
     total_click_counter = 0
     scroll_count = 1
@@ -54,8 +54,8 @@ def redirectPage():
         browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
         new_height = browser.execute_script("return document.body.scrollHeight")
-        scroll_state = browser.execute_script('document.addEventListener("DOMContentLoaded", function() {return true}')
-        print(scroll_state, 'SCROLL_STATE')
+        # scroll_state = browser.execute_script('document.addEventListener("DOMContentLoaded", function() {return true}')
+        # print(scroll_state, 'SCROLL_STATE')
         if new_height == last_height:
             break
         last_height = new_height
